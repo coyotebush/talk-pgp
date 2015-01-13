@@ -65,14 +65,15 @@ NSA?
   \begin{itemize}
     \item finite group $\mathbb{Z}_N$ (modular arithmetic)
     \item choose large primes $p, q$, let $N = p \cdot q$
-    \item $\phi(N) = (p - 1)(q - 1)$, with the property $$\forall_{x\in\mathbb{Z}_n}: x^{\phi(N)} = 1 \mod N$$
+    \item $\phi(N) = (p - 1)(q - 1)$, with the property $$\forall_{x\in\mathbb{Z}^*_n}: x^{\phi(N)} = 1 \mod N$$
     \item choose $e, d$ such that $e \cdot d = 1 \mod \phi(N)$\\
     (hard to find $d$ given just $e$ and $N$)
   \end{itemize}
   \begin{align*}
-  c &= [m^e \mod N]\\
-  m &= [c^d \mod N]\\
-    &= [(m^e)^d \mod N] = m
+  c &:= [m^e \mod N]\\
+  m &:= [c^d \mod N]\\
+    &= [(m^e)^d \mod N]\\
+    &= [m^{k\phi(N) + 1} \mod N] = m
   \end{align*}
 \end{frame}
 
